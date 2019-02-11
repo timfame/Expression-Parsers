@@ -2,6 +2,10 @@
 
 [Условия домашних заданий](http://www.kgeorgiy.info/courses/paradigms/homeworks.html)
 
+## Домашнее задание 2. Markdown to HTML
+ * *Базовая*
+    * [Исходный код тестов](java/md2html/Md2HtmlTest.java)
+    * [Откомпилированные тесты](artifacts/md2html/Md2HtmlTest.jar)
 
 ## Домашнее задание 1. Обработка ошибок
 
