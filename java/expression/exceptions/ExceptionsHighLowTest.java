@@ -29,6 +29,7 @@ public class ExceptionsHighLowTest extends ExceptionsTest {
                 "high(  \\  )",
                 "abb 1",
                 "    abb 1    ",
+                "please, do not display too much context",
                 "high *",
                 "highx",
                 "highx 10",
