@@ -49,7 +49,8 @@ public class ExceptionsTest extends ParserTest {
             op("Constant overflow 2", Integer.MAX_VALUE + 1L + ""),
             op("Bare +", "+"),
             op("Bare -", "-"),
-            op("Bare a", "a")
+            op("Bare a", "a"),
+            op("(())", "(())")
     ));
 
     public static Op<String> parseExample(final String hello) {
