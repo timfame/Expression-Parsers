@@ -15,3 +15,10 @@
     * Нельзя использовать типы `long` и `double`
     * Нельзя использовать методы классов `Math` и `StrictMath`
     * [Исходный код тестов](java/expression/exceptions/ExceptionsTest.java)
+ * *HighLow*
+    * Дополнительно реализовать унарные операции:
+        * `high` — значение, у которого оставлен только самый старший
+          установленный бит `high -4` равно `Integer.MIN_VALUE`;
+        * `low` — — значение, у которого оставлен только самый старший
+          установленный бит `low 18` равно ;.
+    * [Исходный код тестов](java/expression/exceptions/ExceptionsHighLowTest.java)
