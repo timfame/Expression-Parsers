@@ -11,6 +11,10 @@
         ```&lt;a href='https://kgeorgiy.info'>ссылок с &lt;em>выделением&lt;/em>&lt;/a>```
     * [Исходный код тестов](java/md2html/Md2HtmlLinkTest.java)
     * [Откомпилированные тесты](artifacts/md2html/Md2HtmlLinkTest.jar)
+ * *Underline*
+    * Добавьте поддержку `++подчеркивания++`: `<u>подчеркивания</u>`
+    * [Исходный код тестов](java/md2html/Md2HtmlUnderlineTest.java)
+    * [Откомпилированные тесты](artifacts/md2html/Md2HtmlUnderlineTest.jar)
 
 
 ## Домашнее задание 1. Обработка ошибок
