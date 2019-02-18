@@ -12,6 +12,7 @@ public class Md2HtmlLinkTest extends Md2HtmlTest {
         test("[ссылок с _выделением_](https://kgeorgiy.info)", "<p><a href='https://kgeorgiy.info'>ссылок с <em>выделением</em></a></p>");
         test("[ссылка с __выделением__](https://kgeorgiy.info)", "<p><a href='https://kgeorgiy.info'>ссылка с <strong>выделением</strong></a></p>");
         test("[ссылка без выделения](https://kgeorgiy.info)", "<p><a href='https://kgeorgiy.info'>ссылка без выделения</a></p>");
+        test("[ссылка без выделения](https://hello__kgeorgiy.info)", "<p><a href='https://hello__kgeorgiy.info'>ссылка без выделения</a></p>");
         test("_выделение [ссылка с __выделением__](https://kgeorgiy.info)_", "<p><em>выделение <a href='https://kgeorgiy.info'>ссылка с <strong>выделением</strong></a></em></p>");
         super.test();
 
