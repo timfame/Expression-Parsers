@@ -6,6 +6,12 @@
  * *Базовая*
     * [Исходный код тестов](java/md2html/Md2HtmlTest.java)
     * [Откомпилированные тесты](artifacts/md2html/Md2HtmlTest.jar)
+ * *Link*
+    * Добавьте поддержку ```[ссылок с _выделением_](https://kgeorgiy.info)```:
+        ```&lt;a href='https://kgeorgiy.info'>ссылок с <em>выделением</em>&lt;/a>```
+    * [Исходный код тестов](java/md2html/Md2HtmlLinkTest.java)
+    * [Откомпилированные тесты](artifacts/md2html/Md2HtmlLinkTest.jar)
+
 
 ## Домашнее задание 1. Обработка ошибок
 

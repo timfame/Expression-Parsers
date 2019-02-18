@@ -153,7 +153,7 @@ public class Md2HtmlTest {
         final StringBuilder input = new StringBuilder();
         final StringBuilder output = new StringBuilder();
         emptyLines(input);
-        final ArrayList<String> markupList = new ArrayList<>(Arrays.asList(markup));
+        final List<String> markupList = new ArrayList<>(Arrays.asList(markup));
         for (int i = 0; i < paragraphs; i++) {
             final StringBuilder inputSB = new StringBuilder();
             paragraph(length, inputSB, output, markupList);
@@ -192,14 +192,24 @@ public class Md2HtmlTest {
         }
     }
 
-    private void generate(final List<String> markup, final StringBuilder input, final StringBuilder output) {
+    protected void generate(final List<String> markup, final StringBuilder input, final StringBuilder output) {
         word(input, output);
         if (markup.isEmpty()) {
             return;
         }
         final String type = checker.randomItem(markup);
-        final String tag = TAGS.get(type);
+
         markup.remove(type);
+        if (TAGS.containsKey(type)) {
+            ordinary(markup, input, output, type);
+        } else {
+            special(markup, input, output, type);
+        }
+        markup.add(type);
+    }
+
+    private void ordinary(final List<String> markup, final StringBuilder input, final StringBuilder output, final String type) {
+        final String tag = TAGS.get(type);
 
         randomSpace(input, output);
         input.append(type);
@@ -212,14 +222,15 @@ public class Md2HtmlTest {
         input.append(type);
         close(output, tag);
         randomSpace(input, output);
+    }
 
-        markup.add(type);
+    protected void special(final List<String> markup, final StringBuilder input, final StringBuilder output, final String type) {
     }
 
     private void word(final StringBuilder input, final StringBuilder output) {
-        final String prefix = checker.randomString(Randomized.ENGLISH);
-        input.append(prefix);
-        output.append(prefix);
+        final String word = checker.randomString(Randomized.ENGLISH);
+        input.append(word);
+        output.append(word);
     }
 
     private static void open(final StringBuilder output, final String tag) {
