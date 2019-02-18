@@ -83,8 +83,11 @@ public class MainChecker extends Randomized {
         counter.passed();
     }
 
+    public void printStatus(final Class<?> clazz) {
+        counter.printStatus(clazz);
+    }
     public void printStatus() {
-        counter.printStatus(getClass());
+        printStatus(getClass());
     }
 
     protected static void write(final String file, final String contents) throws IOException {

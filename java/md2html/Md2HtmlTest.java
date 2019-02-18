@@ -265,7 +265,7 @@ public class Md2HtmlTest {
     protected void run() {
         test();
 
-        checker.printStatus();
+        checker.printStatus(getClass());
     }
 
     public static void main(final String... args) {

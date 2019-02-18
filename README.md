@@ -25,6 +25,8 @@
 
 
 ## Домашнее задание 2. Markdown to HTML
+
+Модификации
  * *Базовая*
     * [Исходный код тестов](java/md2html/Md2HtmlTest.java)
     * [Откомпилированные тесты](artifacts/md2html/Md2HtmlTest.jar)
@@ -37,6 +39,15 @@
     * Добавьте поддержку `++подчеркивания++`: `<u>подчеркивания</u>`
     * [Исходный код тестов](java/md2html/Md2HtmlUnderlineTest.java)
     * [Откомпилированные тесты](artifacts/md2html/Md2HtmlUnderlineTest.jar)
+ * *Image*
+    * Добавьте поддержку ```![картинок](http://www.ifmo.ru/images/menu/small/p10.jpg)```:
+        ```&lt;img alt='картинок' src='http://www.ifmo.ru/images/menu/small/p10.jpg'&gt;```
+    * [Исходный код тестов](java/md2html/Md2HtmlImageTest.java)
+    * [Откомпилированные тесты](artifacts/md2html/Md2HtmlImageTest.jar)
+ * *Mark*
+    * Добавьте поддержку `~выделения цветом~`: `<mark>выделения цветом</mark>`
+    * [Исходный код тестов](java/md2html/Md2HtmlMarkTest.java)
+    * [Откомпилированные тесты](artifacts/md2html/Md2HtmlMarkTest.jar)
 
 
 ## Домашнее задание 1. Обработка ошибок
