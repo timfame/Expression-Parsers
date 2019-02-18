@@ -50,7 +50,8 @@ public class ExceptionsTest extends ParserTest {
             op("Bare +", "+"),
             op("Bare -", "-"),
             op("Bare a", "a"),
-            op("(())", "(())")
+            op("(())", "(())"),
+            op("10 20", "Spaces in numbers")
     ));
 
     public static Op<String> parseExample(final String hello) {
