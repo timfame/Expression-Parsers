@@ -48,6 +48,10 @@
     * Добавьте поддержку `~выделения цветом~`: `<mark>выделения цветом</mark>`
     * [Исходный код тестов](java/md2html/Md2HtmlMarkTest.java)
     * [Откомпилированные тесты](artifacts/md2html/Md2HtmlMarkTest.jar)
+ * *All*
+    * Добавьте поддержку всех вышеперечисленных модификаций
+    * [Исходный код тестов](java/md2html/Md2HtmlAllTest.java)
+    * [Откомпилированные тесты](artifacts/md2html/Md2HtmlAllTest.jar)
 
 
 ## Домашнее задание 1. Обработка ошибок
