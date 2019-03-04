@@ -2,6 +2,14 @@
 
 [Условия домашних заданий](http://www.kgeorgiy.info/courses/paradigms/homeworks.html)
 
+## Домашнее задание 4. Функциональные выражения на JavaScript
+
+Модификации
+ * *Базовая*
+    * Код должен находиться в файле `functionalExpression.js`.
+    * [Исходный код тестов](javascript/jstest/functional/FunctionalExpressionTest.java)
+        * Запускать c аргументом `hard` или `easy`;
+
 
 ## Домашнее задание 3. Вычисление в различных типах
 
