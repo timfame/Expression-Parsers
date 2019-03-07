@@ -124,7 +124,7 @@ public abstract class BaseJavascriptTest<E extends Engine> extends BaseTest {
         } else {
             return Arrays.asList(modes).indexOf(args[0]);
         }
-        System.err.println("Usage: java -ea " + type.getName() + " (" + String.join("|", modes) + ")");
+        System.err.println("Usage: java -ea " + JSEngine.OPTIONS + " " + type.getName() + " {" + String.join("|", modes) + "}");
         System.exit(0);
         return -1;
     }

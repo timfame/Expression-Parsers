@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
  * @author Georgiy Korneev (kgeorgiy@kgeorgiy.info)
  */
 public class JSEngine implements Engine {
+    public static final String OPTIONS = "-XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI --module-path=<js>/graal --upgrade-module-path=<js>/graal/compiler.jar";
     private final ScriptEngine engine;
     private final String evaluate;
     private String expression;
@@ -28,7 +29,8 @@ public class JSEngine implements Engine {
             if (engine == null) {
                 System.err.println("Graal.js not found");
                 System.err.println("Use the following options to run tests:");
-                System.err.println("-XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI --module-path=graal --upgrade-module-path=graal/compiler.jar");
+                System.err.println(OPTIONS);
+                System.err.println("Where <js> - path to the javascript directory of this repository");
                 throw new AssertionError("Graal.js not found");
             }
 
@@ -47,7 +49,7 @@ public class JSEngine implements Engine {
         } catch (final ScriptException e) {
             throw new EngineException("Script error", e);
         } catch (final IOException e) {
-            throw new EngineException("Script not found", e);
+            throw new EngineException(String.format("Script '%s' not found", script), e);
         }
     }
 

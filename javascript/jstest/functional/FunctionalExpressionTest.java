@@ -44,7 +44,7 @@ public class FunctionalExpressionTest extends BaseJavascriptTest<Engine> {
                 new Language(parsed, POLISH, tests),
                 mode(args, type, "easy", "hard") == 1
         ).run();
-        System.out.println("Mode: " + args[0]);
+        System.err.println("Mode: " + args[0]);
     }
 
     public static void main(final String... args) {

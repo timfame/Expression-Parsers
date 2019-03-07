@@ -27,6 +27,32 @@
     * [Исходный код тестов](javascript/jstest/functional/FunctionalExpressionTest.java)
         * Запускать c аргументом `hard` или `easy`;
 
+Запуск тестов
+ * Для запуска тестов используется [GraalVM](https://www.graalvm.org/)
+ * Для запуска тестов можно использовать скрипты [TestJS.cmd](javascript/TestJS.cmd) и [TestJS.sh](javascript/TestJS.sh)
+    * Репозиторий должен быть скачан целиком.
+    * Скрипты должны находиться в каталоге `javascript` (их нельзя перемещать, но можно вызывать из других каталогов).
+ * Для самостоятельно запуска из консоли необходимо использовать командную строку вида:
+    `java -ea -XX:+UnlockExperimentalVMOptions -XX:+EnableJVMCI --module-path=<js>/graal --upgrade-module-path=<js>/graal/compiler.jar --class-path <js> jstest.functional.FunctionalExpressionTest {hard|easy}`, где
+    * `-ea` – включение проверок времени исполнения;
+    * `-XX:+UnlockExperimentalVMOptions` и `-XX:+EnableJVMCI` – опции необходимые для запуска Graal;
+    * `--module-path=<js>/graal` путь к модулям Graal (здесь и далее `<js>` путь к каталогу `javascript` этого репозитория);
+    * `--upgrade-module-path=<js>/graal/compiler.jar` путь к JIT-компилятору Graal;
+    * `--class-path <js>` путь к откомпилированным тестам;
+    * {`hard`|`easy`} указание тестируемой модификации.
+ * При запуске из IDE, обычно не требуется указывать `--class-path`, так как он формируется автоматически.
+   Остальные опции все равно необходимо указать.
+ * Troubleshooting
+    * `Error occurred during initialization of boot layer java.lang.module.FindException: Module org.graalvm.truffle not found, required by jdk.internal.vm.compiler` – неверно указан `--module-path`;
+    * `ScriptEngineManager providers.next(): javax.script.ScriptEngineFactory: Provider com.oracle.truffle.js.scriptengine.GraalJSEngineFactory could not be instantiated` – неверно указан `--upgrade-module-path` или не указана опция `-XX:+EnableJVMCI`;
+    * `Graal.js not found` – неверно указаны `--module-path` и `--upgrade-module-path`
+    * `Error: Could not find or load main class jstest.functional.FunctionalExpressionTest` – неверно указан `--class-path`;
+    * `Error: Could not find or load main class <other class>` – неверно указано полное имя класса теста;
+    * `Exception in thread "main" java.lang.AssertionError: You should enable assertions by running 'java -ea jstest.functional.FunctionalExpressionTest'` – не указана опция `-ea`;
+    * `Error: VM option 'EnableJVMCI' is experimental and must be enabled via -XX:+UnlockExperimentalVMOptions.` – не указана опция `-XX:+UnlockExperimentalVMOptions`;
+    * `First argument should be one of: "easy", "hard", found: XXX` – неверно указана сложность;
+    * `Exception in thread "main" jstest.EngineException: Script 'functionalExpression.js' not found` – в текущем каталоге отсутствует решение (`functionalExpression.js`)
+
 
 ## Домашнее задание 3. Вычисление в различных типах
 
