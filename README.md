@@ -37,6 +37,12 @@
         * `med3` — медиана трех аргументов, `1 2 -10 med3` равно 1.
     * [Исходный код тестов](javascript/jstest/functional/FunctionalPieAvgMedTest.java)
         * Запускать c аргументом `hard`
+ * *Variables*. Дополнительное реализовать поддержку:
+    * переменных: `y`, `z`;
+    * унарной операции `negate` — смена знака, `-2 negate` равно 2;
+    * [Исходный код тестов](javascript/jstest/functional/FunctionalVariablesTest.java)
+        * Запускать c аргументом `easy`
+
 
 Запуск тестов
  * Для запуска тестов используется [GraalVM](https://www.graalvm.org/)
