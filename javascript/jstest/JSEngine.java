@@ -75,7 +75,7 @@ public class JSEngine implements Engine {
             }
             throw new EngineException(String.format(
                     "Expected %s, found \"%s\" (%s)%s",
-                    token.getClass().getSimpleName(),
+                    token.getSimpleName(),
                     result,
                     result.getClass().getSimpleName(),
                     context
