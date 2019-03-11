@@ -26,6 +26,17 @@
     * Код должен находиться в файле `functionalExpression.js`.
     * [Исходный код тестов](javascript/jstest/functional/FunctionalExpressionTest.java)
         * Запускать c аргументом `hard` или `easy`;
+ * *PieAvgMed*. Дополнительное реализовать поддержку:
+    * переменных: `y`, `z`;
+    * констант:
+        * `pi` — π;
+        * `e` — основание натурального логарифма;
+    * операций:
+        * `negate` — смена знака, `-2 negate` равно 2;
+        * `avg5` — арифметическое среднее пяти аргументов, `1 2 3 4 5 avg5` равно 7.5;
+        * `med3` — медиана трех аргументов, `1 2 -10 med3` равно 1.
+    * [Исходный код тестов](javascript/jstest/functional/FunctionalPieAvgMedTest.java)
+        * Запускать c аргументом `hard`
 
 Запуск тестов
  * Для запуска тестов используется [GraalVM](https://www.graalvm.org/)
