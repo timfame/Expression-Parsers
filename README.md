@@ -69,6 +69,13 @@
             * `iff 0 1 2` равно 1;
     * [Исходный код тестов](javascript/jstest/functional/FunctionalIffAbsTest.java)
         * Запускать c аргументом `hard`
+ * *OneTwo*. Дополнительное реализовать поддержку:
+    * переменных: `y`, `z`;
+    * констант:
+        * `one` — 1;
+        * `two` — 2;
+    * [Исходный код тестов](javascript/jstest/functional/FunctionalOneTwoTest.java)
+        * Запускать c аргументом `easy`
 
 
 Запуск тестов
