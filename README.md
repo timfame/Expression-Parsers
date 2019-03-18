@@ -2,7 +2,7 @@
 
 [Условия домашних заданий](http://www.kgeorgiy.info/courses/paradigms/homeworks.html)
 
-## Домашнее задание 10. Объектные выражения на JavaScript
+## Домашнее задание 5. Объектные выражения на JavaScript
 
 Модификации
  * *Базовая*
@@ -41,7 +41,7 @@
     * Код должен находиться в файле `functionalExpression.js`.
     * [Исходный код тестов](javascript/jstest/functional/FunctionalExpressionTest.java)
         * Запускать c аргументом `hard` или `easy`;
- * *PieAvgMed*. Дополнительное реализовать поддержку:
+ * *PieAvgMed*. Дополнительно реализовать поддержку:
     * переменных: `y`, `z`;
     * констант:
         * `pi` — π;
@@ -51,11 +51,11 @@
         * `med3` — медиана трех аргументов, `1 2 -10 med3` равно 1.
     * [Исходный код тестов](javascript/jstest/functional/FunctionalPieAvgMedTest.java)
         * Запускать c аргументом `hard`
- * *Variables*. Дополнительное реализовать поддержку:
+ * *Variables*. Дополнительно реализовать поддержку:
     * переменных: `y`, `z`;
     * [Исходный код тестов](javascript/jstest/functional/FunctionalVariablesTest.java)
         * Запускать c аргументом `easy`
- * *OneIffAbs*. Дополнительное реализовать поддержку:
+ * *OneIffAbs*. Дополнительно реализовать поддержку:
     * переменных: `y`, `z`;
     * констант:
         * `one` — 1;
@@ -71,7 +71,7 @@
             * `iff 0 one two` равно 1;
     * [Исходный код тестов](javascript/jstest/functional/FunctionalOneIffAbsTest.java)
         * Запускать c аргументом `hard`
- * *IffAbs*. Дополнительное реализовать поддержку:
+ * *IffAbs*. Дополнительно реализовать поддержку:
     * переменных: `y`, `z`;
     * операций:
         * `abs` — абсолютное значение, `-2 abs` равно 2;
@@ -84,7 +84,7 @@
             * `iff 0 1 2` равно 1;
     * [Исходный код тестов](javascript/jstest/functional/FunctionalIffAbsTest.java)
         * Запускать c аргументом `hard`
- * *OneTwo*. Дополнительное реализовать поддержку:
+ * *OneTwo*. Дополнительно реализовать поддержку:
     * переменных: `y`, `z`;
     * констант:
         * `one` — 1;
