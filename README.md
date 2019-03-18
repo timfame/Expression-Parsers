@@ -14,6 +14,16 @@
         * `ArcTan` (`atan`) — арктангенс, `1256 atan` примерно равно 1.57;
         * `ArcTan2` (`atan2`) — арктангенс, `841 540 atan2` примерно равно 1;
     * [Исходный код тестов](javascript/jstest/object/ObjectArcTanTest.java)
+ * *MinMax*. Дополнительно реализовать поддержку:
+    * функций:
+        * `Min3` (`min3`) — минимум из трех аргументов, `1 2 3 min` равно 1;
+        * `Max5` (`max5`) — максимум из пяти аргументов, `1 2 3 4 5 max` равно 5;
+    * [Исходный код тестов](javascript/jstest/object/ObjectMinMaxTest.java)
+ * *SinhCosh*. Дополнительно реализовать поддержку:
+    * унарных функций:
+        * `Sinh` (`sinh`) — гиперболический синус, `3 sinh` немного больше 10;
+        * `Cosh` (`cosh`) — гиперболический косинус, `3 cosh` немного меньше 10;
+    * [Исходный код тестов](javascript/jstest/object/ObjectSinhCoshTest.java)
 
 
 ## Исходный код к лекциям по JavaScript
