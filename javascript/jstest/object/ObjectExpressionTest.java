@@ -71,7 +71,7 @@ public class ObjectExpressionTest extends BaseJavascriptTest<JSEngine> {
     }
 
     private void testDiff(final Expr<TExpr> test, final String expression, final int[] simplifications) {
-//        int[] actual = new int[3];
+//        final int[] actual = new int[3];
         for (int variable = 0; variable < 3; variable++) {
             final String s = expression + ".diff('" + "xyz".charAt(variable) + "')";
             final String value = s + (simplifications != null ? ".simplify()" : "");
@@ -81,8 +81,16 @@ public class ObjectExpressionTest extends BaseJavascriptTest<JSEngine> {
                 final Engine.Result<String> result = engine.parsedToString();
                 final int length = result.value.length();
                 final int expected = simplifications[variable];
+                assertTrue(
+                        String.format(
+                                "Simplified length too long: %d instead of %d%s",
+                                length,
+                                expected,
+                                result.context
+                        ),
+                        length <= expected
+                );
 //                actual[variable] = length;
-                assertTrue("Simplified length too long: " + length + " instead of " + expected + result.context, length <= expected);
             }
             for (int i = MIN; i <= N; i += 1) {
                 final double di = variable == 0 ? D : 0;
@@ -98,7 +106,7 @@ public class ObjectExpressionTest extends BaseJavascriptTest<JSEngine> {
                 }
             }
         }
-//        System.out.format("new int[]{%s}%n", Arrays.toString(actual));
+//        System.out.format("new int[]{%s}%n", Arrays.stream(actual).mapToObj(Integer::toString).collect(Collectors.joining(", ")));
     }
 
     @Override
