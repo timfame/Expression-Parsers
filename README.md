@@ -57,6 +57,12 @@
  * [Модули](javascript/examples/2_3_modules.js)
  * [Пример: стеки](javascript/examples/2_4_stacks.js)
 
+Лекция 3. Другие возможности
+ * [Обработка ошибок](javascript/examples/3_1_errors.js)
+ * [Чего нет в JS](javascript/examples/3_2_no.js)
+ * [Стандартная библиотека](javascript/examples/3_3_builtins.js)
+ * [Работа со свойствами](javascript/examples/3_4_properties.js)
+ * [JS 6+](javascript/examples/3_5_js6.js)
 
 ## Домашнее задание 4. Функциональные выражения на JavaScript
 
