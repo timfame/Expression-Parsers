@@ -12,7 +12,7 @@
  * *PostfixSumexpSoftmax*. Дополнительно реализовать поддержку:
     * выражений в постфиксной записи: `(2 3 +)` равно 5
     * унарных операций:
-        * `Sumexp` (`sumexp`) — сумма экспонент, `(1 2 3 sumexp)` примерно равно 14065;
+        * `Sumexp` (`sumexp`) — сумма экспонент, `(8 8 9 sumexp)` примерно равно 14065;
         * `Softmax` (`softmax`) — softmax первого аргумента, `(1 2 3 softmax)` примерно 9;
     * [Исходный код тестов](javascript/jstest/prefix/PostfixSumexpSoftmaxTest.java)
 
