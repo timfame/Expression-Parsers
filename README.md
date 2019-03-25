@@ -15,6 +15,11 @@
         * `Sumexp` (`sumexp`) — сумма экспонент, `(8 8 9 sumexp)` примерно равно 14065;
         * `Softmax` (`softmax`) — softmax первого аргумента, `(1 2 3 softmax)` примерно 9;
     * [Исходный код тестов](javascript/jstest/prefix/PostfixSumexpSoftmaxTest.java)
+ * *PrefixSumAvg*. Дополнительно реализовать поддержку:
+    * операций произвольного числа аргументов:
+        * `Sum` (`sum`) — сумма, `(sum 1 2 3)` равно 6;
+        * `Avg` (`avg`) — арифметическое среднее, `(avg 1 2 3)` равно 2;
+    * [Исходный код тестов](javascript/jstest/prefix/PrefixSumAvgTest.java)
 
 
 ## Домашнее задание 5. Объектные выражения на JavaScript
