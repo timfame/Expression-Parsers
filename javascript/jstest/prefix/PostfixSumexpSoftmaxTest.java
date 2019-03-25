@@ -1,6 +1,5 @@
 package jstest.prefix;
 
-import jstest.BaseJavascriptTest;
 import jstest.Language;
 
 /**
@@ -22,6 +21,8 @@ public class PostfixSumexpSoftmaxTest extends PrefixSumexpSoftmaxTest {
     }
 
     public static void main(final String... args) {
-        new PostfixSumexpSoftmaxTest(BaseJavascriptTest.mode(args, PostfixSumexpSoftmaxTest.class, "easy", "hard")).run();
+//        test(PrefixSumexpSoftmaxTest.class, PrefixSumexpSoftmaxTest::new, new SumexpSoftmaxTests(), args, SUMEXP_SOFTMAX_OBJECT, "prefix");
+
+        new PostfixSumexpSoftmaxTest(prefixMode(args, PostfixSumexpSoftmaxTest.class)).run();
     }
 }

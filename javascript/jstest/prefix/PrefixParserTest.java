@@ -65,7 +65,11 @@ public class PrefixParserTest extends ObjectExpressionTest {
     }
 
     public static <T extends BaseTest> void test(final Class<T> type, final Constructor<T> cons, final AbstractTests tests, final String[] args, final Dialect parsed, final String toString) {
-        cons.create(mode(args, type, "easy", "hard") + 1, new Language(parsed, PREFIX, tests), toString).run();
+        cons.create(prefixMode(args, type), new Language(parsed, PREFIX, tests), toString).run();
+    }
+
+    protected static <T extends BaseTest> int prefixMode(final String[] args, final Class<T> type) {
+        return mode(args, type, "easy", "hard") + 1;
     }
 
     interface Constructor<T> {
