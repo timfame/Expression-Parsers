@@ -9,6 +9,11 @@
     * Код должен находиться в файле `objectExpression.js`.
     * [Исходный код тестов](javascript/jstest/prefix/PrefixParserTest.java)
         * Запускать c аргументом `easy` или `hard`
+ * *PrefixSumexpSoftmax*. Дополнительно реализовать поддержку:
+    * операций произвольного числа аргументов:
+        * `Sumexp` (`sumexp`) — сумма экспонент, `(8 8 9)` примерно равно 14065;
+        * `Softmax` (`softmax`) — softmax первого аргумента, `(softmax 1 2 3)` примерно равно 9;
+    * [Исходный код тестов](javascript/jstest/prefix/PrefixSumexpSoftmaxTest.java)
  * *PostfixSumexpSoftmax*. Дополнительно реализовать поддержку:
     * выражений в постфиксной записи: `(2 3 +)` равно 5
     * унарных операций:
@@ -20,6 +25,18 @@
         * `Sum` (`sum`) — сумма, `(sum 1 2 3)` равно 6;
         * `Avg` (`avg`) — арифметическое среднее, `(avg 1 2 3)` равно 2;
     * [Исходный код тестов](javascript/jstest/prefix/PrefixSumAvgTest.java)
+ * *PostfixSumAvg*. Дополнительно реализовать поддержку:
+    * выражений в постфиксной записи: `(2 3 +)` равно 5
+    * унарных операций:
+        * `Sum` (`sum`) — сумма, `(1 2 3 sum)` равно 6;
+        * `Avg` (`avg`) — арифметическое среднее, `(1 2 3 avg)` равно 2;
+    * [Исходный код тестов](javascript/jstest/prefix/PostfixSumAvgTest.java)
+ * *PostfixSumsqLength*. Дополнительно реализовать поддержку:
+    * выражений в постфиксной записи: `(2 3 +)` равно 5
+    * унарных операций:
+        * `Sumsq` (`sumsq`) — сумма квадратов, `(1 2 3 sumsq)` равно 14;
+        * `Length` (`length`у) — длина вектора, `(3 4 length)` равно 5;
+    * [Исходный код тестов](javascript/jstest/prefix/PostfixSumsqLengthTest.java)
 
 
 ## Домашнее задание 5. Объектные выражения на JavaScript
