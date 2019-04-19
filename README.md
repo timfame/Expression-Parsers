@@ -9,6 +9,11 @@
     * Код должен находиться в файле `expression.clj`.
     * [Исходный код тестов](clojure/cljtest/functional/ClojureFunctionalExpressionTest.java)
         * Запускать c аргументом `easy` или `hard`
+ * *Модификация*. Дополнительно реализовать поддержку:
+    * унарных операций:
+        * `square` (`square`) — возведение в квадрат, `(square 3)` равно 9;
+        * `sqrt` (`sqrt`) — извлечение квадратного корня из модуля аргумента, `(sqrt -9)` равно 3.
+    * [Исходный код тестов](clojure/cljtest/functional/ClojureFunctionalSquareSqrtTest.java)
 
 
 ## Домашнее задание 7. Линейная алгебра на Clojure
