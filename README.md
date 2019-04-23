@@ -19,16 +19,22 @@
     * Код должен находиться в файле `expression.clj`.
     * [Исходный код тестов](clojure/cljtest/functional/ClojureFunctionalExpressionTest.java)
         * Запускать c аргументом `easy` или `hard`
- * *Модификация*. Дополнительно реализовать поддержку:
+ * *Модификация SquareSqrt*. Дополнительно реализовать поддержку:
     * унарных операций:
         * `square` (`square`) — возведение в квадрат, `(square 3)` равно 9;
         * `sqrt` (`sqrt`) — извлечение квадратного корня из модуля аргумента, `(sqrt -9)` равно 3.
     * [Исходный код тестов](clojure/cljtest/functional/ClojureFunctionalSquareSqrtTest.java)
- * *Модификация*. Дополнительно реализовать поддержку:
+ * *Модификация MinMax*. Дополнительно реализовать поддержку:
     * операций:
         * `min` (`min`) — минимум, `(min 1 2 6)` равно 1;
         * `max` (`max`) — максимум, `(min 1 2 6)` равно 6;
     * [Исходный код тестов](clojure/cljtest/functional/ClojureFunctionalMinMaxTest.java)
+        * Запускать c аргументом `easy` или `hard`
+ * *Модификация MedAvg*. Дополнительно реализовать поддержку:
+    * операций:
+        * `med` (`med`) — медиана, `(med 1 2 6)` равно 2;
+        * `avg` (`max`) — среднее, `(min 1 2 6)` равно 3;
+    * [Исходный код тестов](clojure/cljtest/functional/ClojureFunctionalMedAvgTest.java)
         * Запускать c аргументом `easy` или `hard`
 
 
