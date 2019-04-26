@@ -3,7 +3,7 @@
 (example "Maps as objects"
          (def point {:x 10 :y 20})
          point
-         (pointb :getX
+         (point :x))
 
 (section "Prototypes")
 (example "Object with prototype"
