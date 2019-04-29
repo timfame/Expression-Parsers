@@ -10,6 +10,11 @@
     * Код должен находиться в файле `expression.clj`.
     * [Исходный код тестов](clojure/cljtest/object/ClojureObjectExpressionTest.java)
         * Запускать c аргументом `easy` или `hard`
+ * *Модификация SquareSqrt*. Дополнительно реализовать поддержку:
+    * унарных операций:
+        * `Square` (`square`) — возведение в квадрат, `(square 3)` равно 9;
+        * `Sqrt` (`sqrt`) — извлечение квадратного корня из модуля аргумента, `(sqrt -9)` равно 3.
+    * [Исходный код тестов](clojure/cljtest/object/ClojureObjectSquareSqrtTest.java)
 
 
 ## Домашнее задание 8. Функциональные выражения на Clojure
