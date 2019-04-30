@@ -44,11 +44,12 @@ public class ClojureObjectExpressionTest extends ClojureFunctionalExpressionTest
         testToString(addSpaces(parsed, random), unparsed);
     }
 
-    private void testToString(final String expression, final String expected) {
+    protected void testToString(final String expression, final String expected) {
         engine.parse(expression);
         final Engine.Result<String> result = engine.parsedToString();
         assertEquals(result.context, expected, result.value);
     }
+
     @Override
     protected void test() {
         super.test();
