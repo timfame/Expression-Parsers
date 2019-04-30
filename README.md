@@ -131,6 +131,11 @@
  * [Изменяемое состояние](clojure/examples/3_3_mutable-state.clj)
  * [Числа Чёрча](clojure/examples/3_4_church.clj)
 
+Лекция 4. Комбинаторные парсеры
+ * [Базовые функции](clojure/examples/4_1_base.clj)
+ * [Комбинаторы](clojure/examples/4_2_combinators.clj)
+ * [JSON](clojure/examples/4_3_json.clj)
+ * [Макросы](clojure/examples/4_4_macro.clj)
 
 ## Домашнее задание 6. Обработка ошибок на JavaScript
 
