@@ -60,7 +60,7 @@ public class ClojureObjectExpressionTest extends ClojureFunctionalExpressionTest
         }
     }
 
-    private void testDiff(final Expr<TExpr> test, final String expression) {
+    protected void testDiff(final Expr<TExpr> test, final String expression) {
         for (int variable = 0; variable < 3; variable++) {
             final String value = "(diff " + expression + " \"" + "xyz".charAt(variable) + "\")";
             System.out.println("Testing: " + value);
