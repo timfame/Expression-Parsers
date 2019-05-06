@@ -1,7 +1,6 @@
 package cljtest.parsing;
 
 import jstest.ArithmeticTests;
-import jstest.VariablesTests;
 
 import java.util.Random;
 
@@ -11,17 +10,17 @@ import java.util.Random;
 public class ClojureVariablesParsingTest extends ClojureObjectParsingTest {
     private static final Random RANDOM = new Random(4370528470872345L);
     public ClojureVariablesParsingTest(final boolean hard) {
-        super(new XxxTests(RANDOM), hard);
+        super(new VariablesTests(RANDOM), hard);
     }
 
     public static void main(final String... args) {
         new ClojureVariablesParsingTest(mode(args, ClojureVariablesParsingTest.class)).run();
     }
 
-    static class XxxTests extends VariablesTests {
+    static class VariablesTests extends jstest.VariablesTests {
         private final Random random;
 
-        public XxxTests(final Random random) {
+        public VariablesTests(final Random random) {
             this.random = random;
             binary("+", (a, b) -> a + b);
             binary("-", (a, b) -> a - b);

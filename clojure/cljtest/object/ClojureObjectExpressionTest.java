@@ -1,7 +1,8 @@
 package cljtest.object;
 
-import cljtest.multi.MultiTests;
+import cljtest.ClojureScript;
 import cljtest.functional.ClojureFunctionalExpressionTest;
+import cljtest.multi.MultiTests;
 import jstest.Engine;
 import jstest.Language;
 
@@ -23,6 +24,7 @@ public class ClojureObjectExpressionTest extends ClojureFunctionalExpressionTest
             .rename("negate", "Negate");
 
     public static final double D = 1e-4;
+    private static final ClojureScript.F<String> TO_STRING = ClojureScript.function("toString", String.class);
 
     protected ClojureObjectExpressionTest(final Language language) {
         super(language, Optional.of("evaluate"));
@@ -46,7 +48,7 @@ public class ClojureObjectExpressionTest extends ClojureFunctionalExpressionTest
 
     protected void testToString(final String expression, final String expected) {
         engine.parse(expression);
-        final Engine.Result<String> result = engine.parsedToString();
+        final Engine.Result<String> result = engine.toString(TO_STRING);
         assertEquals(result.context, expected, result.value);
     }
 
