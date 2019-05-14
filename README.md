@@ -3,6 +3,21 @@
 [Условия домашних заданий](http://www.kgeorgiy.info/courses/paradigms/homeworks.html)
 
 
+## Исходный код к лекциям по Prolog
+
+Запуск Prolog
+ * [Windows](prolog/RunProlog.cmd)
+ * [*nix](prolog/RunProlog.sh)
+
+Лекция 1. Введение в пролог
+ * [Учебный план](prolog/examples/1_plan.pl)
+ * [Вычисления](prolog/examples/2_calc.pl)
+ * [Списки](prolog/examples/3_lists.pl)
+ * [Задача о расстановке ферзей](prolog/examples/4_queens.pl)
+ * [Загадка Эйнштейна](prolog/examples/5_einstein.pl)
+ * [Арифметические выражения](prolog/examples/6_expressions.pl)
+
+
 ## Домашнее задание 10. Комбинаторные парсеры
 Модификации
  * *Базовая*
