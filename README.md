@@ -3,7 +3,7 @@
 [Условия домашних заданий](http://www.kgeorgiy.info/courses/paradigms/homeworks.html)
 
 
-## Домашнее задание 11. Map на Prolog
+## Домашнее задание 11. Ассоциативные массивы на Prolog
 
 Модификации
  * *Простая*
