@@ -3,13 +3,17 @@
 [Условия домашних заданий](http://www.kgeorgiy.info/courses/paradigms/homeworks.html)
 
 
-## Домашнее задание 11. Дерево поиска на Prolog
+## Домашнее задание 11. Map на Prolog
 
 Модификации
- * *Базовая*
-    * Код должен находиться в файле `tree.pl`.
+ * *Простая*
+    * Код должен находиться в файле `sorted-list-map.pl`.
+    * [Исходный код тестов](prolog/prtest/list/PrologListTest.java)
+        * Запускать c аргументом `sorted`
+ * *Сложная*
+    * Код должен находиться в файле `tree-map.pl`.
     * [Исходный код тестов](prolog/prtest/tree/PrologTreeTest.java)
-        * Запускать c аргументом `easy` или `hard`
+        * Запускать c аргументом `hard` или `bonus`
 
 
 ## Исходный код к лекциям по Prolog
