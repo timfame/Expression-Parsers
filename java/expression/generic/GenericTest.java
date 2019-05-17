@@ -1,6 +1,6 @@
 package expression.generic;
 
-import expression.BaseTest;
+import expression.expressions.BaseTest;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ public class GenericTest extends BaseTest {
     public static final int MAX = Integer.MAX_VALUE - 1;
     public static final int MIN = Integer.MIN_VALUE;
 
-    protected final List<Op<F<?>>> tests = new ArrayList<>();
+    protected final List<BaseTest.Op<F<?>>> tests = new ArrayList<>();
     private final Tabulator tabulator = new GenericTabulator();
 
     public GenericTest() {
