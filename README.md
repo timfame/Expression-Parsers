@@ -14,6 +14,12 @@
     * Код должен находиться в файле `tree-map.pl`.
     * [Исходный код тестов](prolog/prtest/tree/PrologTreeTest.java)
         * Запускать c аргументом `hard` или `bonus`
+ * *Replace*
+    * Добавьте правило `map_replace(Map, Key, Value, Result)`,
+        заменяющего значения ключа на указанное, если ключ присутствует.
+    * Исходный код тестов:
+        [простые](prolog/prtest/list/PrologListReplaceTest.java),
+        [сложные](prolog/prtest/tree/PrologTreeReplaceTest.java)
 
 
 ## Исходный код к лекциям по Prolog
