@@ -4,11 +4,12 @@ import java.io.IOException;
 
 public class Md2Html {
     public static void main(String[] args) throws IOException {
-        try (FileMdSourse files = new FileMdSourse(args[0], args[1])) {
-            // FileMdSourse files = new FileMdSourse("input.txt", "output.txt");
+        try (FileMdSource files = new FileMdSource(args[0], args[1])) {
+            // FileMdSource files = new FileMdSource("input.txt", "output.txt");
             MdConverter res = new MdConverter(files);
             files.write(res.convert());
-            files.close();
-        } catch
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

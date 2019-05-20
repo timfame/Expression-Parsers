@@ -2,7 +2,7 @@ package md2html;
 
 import java.io.IOException;
 
-public abstract class MdSourse {
+public abstract class MdSource {
     public static char END = '\0';
 
     protected int pos;
@@ -32,7 +32,7 @@ public abstract class MdSourse {
         int enter = 0;
         nextChar();
         skipEnters();
-        while (getChar() != MdSourse.END) {
+        while (getChar() != MdSource.END) {
             if (getChar() == '\n') {
                 enter++;
             } else {

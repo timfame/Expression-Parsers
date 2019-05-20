@@ -3,10 +3,10 @@ package md2html;
 import java.io.IOException;
 
 public class MdConverter {
-    private FileMdSourse files;
+    private FileMdSource files;
     private String currentParagraph;
 
-    public MdConverter(FileMdSourse files) {
+    public MdConverter(FileMdSource files) {
         this.files = files;
     }
 

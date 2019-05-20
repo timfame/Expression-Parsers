@@ -1,3 +1,7 @@
+.idea/libraries/*
+.idea/*
+out/
+paradigms-2019.iml
 artifacts/md2html/*
 
 clojure/cljtest/*
@@ -12,7 +16,9 @@ clojure/*
 !clojure/objects.clj
 
 java/expression/*/*.class
+java/expression/generic/*Test.java
 java/md2html/*.class
+java/md2htnl/*Test.java
 
 javascript/examples/*
 javascript/graal/*

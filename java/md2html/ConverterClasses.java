@@ -2,6 +2,7 @@ package md2html;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ConverterClasses {
@@ -11,8 +12,8 @@ public class ConverterClasses {
     private int indexOfClass;
     private int currentImage = 0;
 
-    private static ArrayList<String> classes = new ArrayList<>();
-    private static ArrayList<String> display = new ArrayList<>();
+    private static final List<String> classes = new ArrayList<>();
+    private static final List<String> display = new ArrayList<>();
     private static Map<String,String> specialCharacters = new HashMap<>();
     private Map<String,Boolean> status = new HashMap<>();
 
@@ -23,8 +24,6 @@ public class ConverterClasses {
         classes.add("__"); display.add("strong");
         classes.add("--"); display.add("s");
         classes.add("`"); display.add("code");
-        classes.add("++"); display.add("u");
-        classes.add("~"); display.add("mark");
         specialCharacters.put("<","&lt;");
         specialCharacters.put(">","&gt;");
         specialCharacters.put("&","&amp;");
@@ -38,8 +37,6 @@ public class ConverterClasses {
         status.put("__", false);
         status.put("--", false);
         status.put("`", false);
-        status.put("++", false);
-        status.put("~", false);
     }
 
     public void getClass(int index) {
@@ -54,7 +51,7 @@ public class ConverterClasses {
         for (int i = 0; i < classes.size(); i++) {
             String currentClass = classes.get(i);
             if (index + currentClass.length() - 1 < text.length() &&
-                text.substring(index, index + currentClass.length()).equals(currentClass)) {
+                    text.substring(index, index + currentClass.length()).equals(currentClass)) {
                 res = currentClass;
             }
         }
@@ -73,16 +70,12 @@ public class ConverterClasses {
                 return;
             }
         }
-        if (res != null && !res.equals("")) {
+        if (!res.equals("")) {
             lastClass = res;
             indexOfClass = classes.indexOf(lastClass);
             Boolean flag = status.get(lastClass);
             if (flag != null) {
-                if (flag == true) {
-                    flag = false;
-                } else {
-                    flag = true;
-                }
+                flag = !flag;
             }
             status.put(lastClass, flag);
             return;
@@ -102,13 +95,9 @@ public class ConverterClasses {
         if (str == null) {
             lastClass = lastDisplay = text.substring(index, index + 1);
         }
-        return;
     }
 
     public String getDisplay(int index) {
-        if (lastClass.equals("[")) {
-            lastDisplay = makeLink(index).toString();
-        }
         if (indexOfClass >= 0) {
             StringBuilder openOrClose = new StringBuilder();
             Boolean flag = status.get(lastClass);
@@ -148,44 +137,4 @@ public class ConverterClasses {
         return null;
     }
 
-    private StringBuilder makeLink(int index) {
-        StringBuilder res = new StringBuilder();
-        StringBuilder textLink = new StringBuilder();
-        StringBuilder hrefLink = new StringBuilder();
-        boolean itWasLink = false;
-        int stepLink = 0;
-        int i = index + 1;
-        while (i < text.length()) {
-            if (i + 1 < text.length() && text.substring(i, i + 2).equals("](") && stepLink == 0) {
-                i += 2;
-                stepLink = 1;
-            }
-            if (text.charAt(i) == ')' && stepLink == 1) {
-                itWasLink = true;
-                break;
-            }
-            if (stepLink == 0) {
-                getClass(i);
-                String replace = getDisplay(i);
-                i += getShift();
-                textLink.append(replace);
-            }
-            if (stepLink == 1) {
-                hrefLink.append(text.charAt(i));
-                i++;
-            }
-        }
-        indexOfClass = -1;
-        if (itWasLink) {
-            lastClass = text.substring(index, i + 1);
-            return res.append("<a href='").append(hrefLink).append("'>").append(textLink).append("</a>");
-        }
-        i = index;
-        while (i < text.length()) {
-            res.append(text.charAt(i));
-            i++;
-        }
-        lastClass = res.toString();
-        return res;
-    }
 }
