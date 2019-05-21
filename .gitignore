@@ -18,7 +18,7 @@ clojure/*
 java/expression/*/*.class
 java/expression/generic/*Test.java
 java/md2html/*.class
-java/md2htnl/*Test.java
+java/md2html/*Test.java
 
 javascript/examples/*
 javascript/graal/*
@@ -33,3 +33,4 @@ prolog/lib/*
 prolog/prtest/*
 prolog/prtest/*/*
 prolog/*
+!prolog/tree-map.pl
