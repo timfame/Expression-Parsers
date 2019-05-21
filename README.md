@@ -20,6 +20,17 @@
     * Исходный код тестов:
         [простые](prolog/prtest/list/PrologListReplaceTest.java),
         [сложные](prolog/prtest/tree/PrologTreeReplaceTest.java)
+ * *Size*
+    * Добавьте правило `map_size(Map, Size)`, возвращающее размер дерева
+    * Исходный код тестов:
+        [простые](prolog/prtest/list/PrologListSizeTest.java),
+        [сложные](prolog/prtest/tree/PrologTreeSizeTest.java)
+ * *floorKey*
+    * Добавьте правило `map_floorKey(Map, Key, FloorKey)`,
+      вовзращающее максимальный ключ, меньший либо равный заданному.
+    * Исходный код тестов:
+        [простые](prolog/prtest/list/PrologListFloorTest.java),
+        [сложные](prolog/prtest/tree/PrologTreeFloorTest.java)
 
 
 ## Исходный код к лекциям по Prolog
